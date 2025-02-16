@@ -1,1 +1,7 @@
-DSA notes
+____________________________________________DSA_______________________________________
+
+
+stacks
+queue
+priority queue
+linked list (singly)
