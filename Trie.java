@@ -76,14 +76,28 @@ public class Trie {
 
     }
 
+     // search for prifix
+     public static boolean searchPrefix(String prefix) {
+        Node currentvalue = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            int index = prefix.charAt(i) - 'a';
+            if (currentvalue.children[index] == null) {
+                return false;
+            }
+            currentvalue = currentvalue.children[index]; // updatin level
+        }
+        return true;
+    }
+    
+
     public static void main(String[] args) {
         String words[] = { "the", "a", "there", "their", "any" };
         for (int i = 0; i < words.length; i++) {
             insert(words[i]);
         }
-        System.out.println(seacrch("their"));
-        System.out.println(seacrch("thor"));
-        System.out.println(seacrch("apple"));
-        System.out.println(seacrch("a"));
+        System.out.println(seacrch("their"));  // true
+        System.out.println(seacrch("thor")); // false 
+        System.out.println(searchPrefix("jghe")); // false 
+
     }
 }
