@@ -1,50 +1,142 @@
-import java.util.LinkedList;
+// import java.util.LinkedList;
+// operations = insert , delete , check size , print linked list.
 
 public class Linkedlisttt {
+    // creating node class in the
+    // list___________________________________________________
+    Node head;
+    private int size;
+
+    Linkedlisttt() {
+        this.size = 0;
+    }
+
+    class Node {
+        // store data , store next.
+        String data;
+        Node next; // next node
+
+        // create constructor
+        Node(String data) {
+            size++;
+            this.data = data;
+            this.next = null; // the next will bebydefoly null for every node.
+        }
+        // ______________________________________________________________________________
+    }
+
+    // (1): add - first.
+    public void addFirst(String data) {
+
+        // adding element on first position.
+        // creating node
+        Node newnode = new Node(data);
+        // if node dont exist
+        if (head == null) {
+            // asign the head to the new node
+            head = newnode;
+            return;
+        }
+        // if node exists
+        newnode.next = head;
+        head = newnode;
+    }
+
+    // (2): add -last
+    public void addLast(String data) {
+
+        // adding element on last position.
+        // creating new node
+        Node newnode = new Node(data);
+        if (head == null) {
+            head = newnode;
+            return;
+        }
+
+        // traverse on the list then change the null node to the new node an new node
+        // travelling on the linked list then update the nodes till the value touch last
+        Node currentNode = head; // NOTE: never cahnge the head of the list and take the head as current node
+        while (currentNode.next != null) { // traverse till the last node is not null.
+            currentNode = currentNode.next; // means the next value will the current value
+        }
+        // if it raches to the null
+        currentNode.next = newnode;
+
+    }
+
+    // print node
+    public void printList() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        Node currentNode = head;
+        while (currentNode != null) {
+            System.out.print("[" + currentNode.data + "]" + "-");
+            currentNode = currentNode.next;
+        }
+        System.out.println("null");
+
+    }
+
+    // delete node
+    // when we shift the head of the list to another node then the previus will be
+    // removed forever
+
+    // (3): delete - first
+    public void deletefirst() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        size--;
+        head = head.next; // shift the head to the next node.
+    }
+
+    // (4): delete - last
+    public void deletelast() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        size--; // above the if
+        if (head.next == null) {
+            head = null;
+        }
+        // take the secondlast node and last node then tranverse the list
+        Node secondlastnode = head;
+        Node lastNode = head.next; // if the head .next is null then lastnode will be also null
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
+            secondlastnode = secondlastnode.next;
+        }
+        secondlastnode.next = null;
+    }
+
+    // size
+    public int getsize() {
+        return size;
+    }
+
     public static void main(String[] args) {
-        // Create a new linked list
-        LinkedList<String> list = new LinkedList<String>();
-        // 1.this method will add item in a form of stack
-        // list.push("A");
-        // list.push("B");
-        // list.push("c");
-        // list.push("d");
-        // list.push("e");
-        // output = [e, d, c, B, A]
+        // creating object of our linked list
+        Linkedlisttt ll = new Linkedlisttt();
+        ll.addFirst("a");
+        ll.addFirst("b"); // this will point to the "a " therefore the first element will be "b"-"a"
+        ll.addFirst("newa");
 
-        // 2.this method will add item in a form of queqe means the first item comes at
-        // the top
-        // list.offer("A");
-        // list.offer("B");
-        // list.offer("c");
-        // list.offer("d");
-        // list.offer("e");
-        // list.poll(); // e will remove
-        // System.out.println(list); // output =[A, B, c, d, e]
+        ll.addLast("lastnode");
+        ll.printList();
 
-        // here we are adding a element in the middel of the stack
-        list.offer("A");
-        list.offer("B");
-        list.offer("c");
-        list.offer("d");
-        list.offer("e");
-        list.add(2, "new item");
-        // list.remove( "new item"); // form here new item were removed form the stack
-        System.out.println(list); // output [A, B, "new item", c, d, e],indexing is tarted from the 0 thats why
-                                  // "new item" come at the 3rd position
-        System.out.println(list.indexOf("new item")); // 2
-
-        // we can also peek element from the fist and last of the stack
-        System.out.println(list.peekFirst()); // it willpeek the first element form the stack A
-        System.out.println(list.peekLast()); // it willpeek the last element form the stack E
-
-        System.out.println(list); // output [A, B, "new item", c, d, e],indexing is tarted from the 0 thats why
-                                  // "new item" come at the 3rd position
-
-        // we also add element at first and last.
-        list.addFirst("addfirst");
-        list.addLast("addlast");
-        System.out.println(list); // output = [addfirst, A, B, new item, c, d, e, addlast]
-
+        ll.deletefirst();
+        ll.printList();
+        // output :
+        // [newa]-[b]-[a]-[lastnode]-null
+        // [b]-[a]-[lastnode]-null
+        ll.deletelast();
+        ll.printList();
+        // [newa]-[b]-[a]-[lastnode]-null
+        // [newa]-[b]-[a]-null
+        System.out.println(ll.getsize());
     }
 }
