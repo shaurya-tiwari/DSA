@@ -1,3 +1,6 @@
+// time complexity = O(n^2) not optimized 
+
+
 public class selectionsort {
     public static void main(String[] args) {
         int array[] = { 3, 6, 8, 9, 5, 2, 6, 9, 4, 1, 5 };
@@ -17,6 +20,7 @@ public class selectionsort {
                     minumum = j;
                 }
             }
+            // swap
             int temp = array[i];
             array[i] = array[minumum];
             array[minumum] = temp;

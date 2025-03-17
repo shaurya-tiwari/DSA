@@ -1,3 +1,5 @@
+// in his technique we divide the array in two part ,sorted part and unsorted part. 
+
 public class insertionsort {
     public static void main(String[] args) {
         int[] array = { 8, 6, 7, 4, 3, 5, 2, 1, 9 };
@@ -9,6 +11,7 @@ public class insertionsort {
 
     public static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
+            // take current array index and last index.
             int temp = array[i];
             int j = i - 1;
             while (j >= 0 && array[j] > temp) {
