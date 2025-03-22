@@ -1,4 +1,4 @@
-//  maintain a "window" (a subset of data) that slides across the data structure to efficiently process it, 
+// Sliding window =  maintain a "window" (a subset of data) that slides across the data structure to efficiently process it, 
 // often reducing the need for nested loops and improving time complexity. 
 // time coplexity = 
 
@@ -55,6 +55,6 @@ class Solution {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(3, 4, 1, 9, 56, 7, 9, 12));
         System.out.println(ob.findMinDiff(arr, 5));
         //System.out.println(ob.findMinDiff(arr, 3));
-        
+
     }
 }
