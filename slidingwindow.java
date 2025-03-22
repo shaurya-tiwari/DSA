@@ -54,5 +54,7 @@ class Solution {
         Solution ob = new Solution();
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(3, 4, 1, 9, 56, 7, 9, 12));
         System.out.println(ob.findMinDiff(arr, 5));
+        //System.out.println(ob.findMinDiff(arr, 3));
+        
     }
 }
