@@ -24,6 +24,7 @@ public class selectionsort {
             int temp = array[i];
             array[i] = array[minumum];
             array[minumum] = temp;
-        }
+        }  
+        
     }
 }
