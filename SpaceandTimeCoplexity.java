@@ -21,9 +21,29 @@
     // Space complexity is the amount of memory an algorithm uses, not including the input size.
     // Examples:
     //  - Space complexity of a simple search algorithm is O(1)
-    //  - Space complexity of a recursive algorithm is O(n)
-
+    //  - Space complexity of a recursive algorithm is O(n)  
 
  // in worst case the space complexity will be O(n) because in worst case the recursive function call stack will be of n size.
  // in average case the space complexity will be O(1) because in average case the recursive function call stack will be of constant size.
+              
 
+// TIME COMPLEXITY        
+
+    // O(1) - constant time complexity
+    // O(log n) - logarithmic time complexity
+    // O(n) - linear time complexity
+    // O(n log n) - linearithmic time complexity
+    // O(n^2) - quadratic time complexity
+    // O(n^3) - cubic time complexity
+    // O(2^n) - exponential time complexity
+    // O(n!) - factorial time complexity
+
+// SPACE COMPLEXITY
+    // O(1) - constant space complexity
+    // O(log n) - logarithmic space complexity
+    // O(n) - linear space complexity
+    // O(n log n) - linearithmic space complexity
+    // O(n^2) - quadratic space complexity
+    // O(n^3) - cubic space complexity
+    // O(2^n) - exponential space complexity
+    // O(n!) - factorial space complexity
