@@ -3,7 +3,7 @@ import java.util.HashSet;
 // insert / add = constant time (O(1))
 // search / contains = constant time (O(1))
 // delete / remove  = constant time (O(1))
-
+//  hashing use to covert KV to indices 
 import java.util.Iterator;
 // iterate over the elements and traversing on the all the elements .
 
