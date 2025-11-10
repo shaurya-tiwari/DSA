@@ -5,14 +5,15 @@ public class stringbuilder {
         // sb.append("B");
         // sb.append("I");
         // sb.append("R");
-        // sb.insert(2, "b");
-        // // sb.delete(0, 2); // 2 will exclude from the removing characters
+        // sb.insert(2, "b");  
+        // sb.delete(start,end);
+        // sb.delete(0, 2); // 2 will exclude from the removing characters
         // System.out.println(sb);
         // System.out.println(sb.length());
 
         // reverse string
         for(int i = 0; i < sb.length()/2; i++){ // the loop will goes half of the word length 
-             int front = i;
+            int front = i;
              int back = sb.length() - 1 - i; //last character
 
             //  take as teh character 
@@ -21,7 +22,6 @@ public class stringbuilder {
 
             sb.setCharAt(front, backchar);
             sb.setCharAt(back, frontchar);
-            
             System.out.println(sb);
 
         }
