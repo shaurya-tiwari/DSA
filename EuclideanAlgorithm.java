@@ -23,3 +23,5 @@ class EuclideanAlgorithm {
         System.out.println(gcd);
     }
 }
+//  the patterns is 
+// take number ---> euclidean(a=a%b) ---> make it small ---> repeat 
