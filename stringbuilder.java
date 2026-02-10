@@ -1,7 +1,7 @@
 public class stringbuilder {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder("KABIR");
-        // sb.append("A");
+        // sb.append("A"); add at last element 
         // sb.append("B");
         // sb.append("I");
         // sb.append("R");
