@@ -1,10 +1,10 @@
-
+// prime number : the number that have only two factors the numbr 
 public class checkprimeNumber {
 
     public boolean print(int n) {
         if (n == 2)
             return true;
-        if (n % 2 == 00) {
+        if (n % 2 == 0) {
             return false;
         }
         return true;
