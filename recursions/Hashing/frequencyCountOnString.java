@@ -13,9 +13,9 @@ public class frequencyCountOnString {
         for (int i = 0; i < word.length(); i++) {
             char characters = word.charAt(i);
             // take the character andd if it exist increase the count ++.
-            charactersHash[characters - 'A']++; // here +1 will not work because its character . in small letter
+            charactersHash[characters - 'A']++; // it says that A minus 256 , dotn use it if its 256 ,use it direct 
         }
-        System.out.println("character appears =" + charactersHash['j' - 'A']); // count g from small letters
+        System.out.println("character appears =" + charactersHash['j' - 'A']); // use it direct if the  space is 256 
     }
 
     public static void main(String[] args) {
@@ -23,3 +23,7 @@ public class frequencyCountOnString {
         frequencyCountOnString.countcharacters();
     }
 }
+// Simple Rule of Thumb: Agar array ka size 256 likha hai, toh pure code mein kahin bhi - 'a' ya - 'A' nahi aana chahiye. Bas direct variable ka naam pass karna hai.
+
+
+// DIRECT  USE 
