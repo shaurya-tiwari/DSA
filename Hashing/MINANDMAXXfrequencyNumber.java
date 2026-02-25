@@ -12,20 +12,34 @@ public class MINANDMAXXfrequencyNumber {
         // take maxim and minimum frequnecy and elements
         int maxfrequency = 0, minfrequency = n;// means the minimum frwuncy not more then the length of array
         int maxelement = 0, minelement = 0;
-    }
-    // traverse on the map
-    // use for each for traversing
-    for(
+        // traverse on the map
+        // use for each for traversing , just like creating new , map for key and values
 
-    Map.Entry<Integer, Integer> entry:mapelements.entrySet())
-    {
-        int elements = entry.getKey(); // get that elemt from the map
-        int count = entry.getValue(); // how many times it appeared
+        for (Map.Entry<Integer, Integer> entry : mapelements.entrySet()) {
+            int elements = entry.getKey(); // get that elemt from the map
+            int count = entry.getValue(); // how many times it appeared
+
+            // for maxmum vulue
+            if (count > maxfrequency) {
+                maxfrequency = count;
+                maxelement = elements;
+            }
+            // for minimum frequency element
+            if (count < minfrequency) {
+                minfrequency = count;
+                minelement = elements;
+            }
+
+        }
+        // print
+        System.out.println("max frewuncy = " + maxelement);
+        System.out.println("min  frewuncy = " + minelement);
     }
+    // main logic for count
 
     public static void main(String[] args) {
         MINANDMAXXfrequencyNumber objectclass = new MINANDMAXXfrequencyNumber();
-        int[] arr = { 1, 2, 3, 4, 5, 6, 5, 4, 3, 4, 5, 7, 8, 9, 8, 7, 6, 5, 3, 5, 7, 8, 4 };
+        int[] arr = { 1, 2, 3, 4, 4, 7 };
         objectclass.findminmax(arr, arr.length);
     }
 }
