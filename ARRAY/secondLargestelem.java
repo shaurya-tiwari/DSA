@@ -17,7 +17,7 @@ public class secondLargestelem {
         for (int i = 0; i < n; i++) {
             // find small from array
             smalles = Math.min(smalles, arr[i]); // smalles in arr elements i
-            largestvalue = Math.max(largestvalue, arr[i]);
+            largestvalue = Math.max(largestvalue, arr[i]);a
         }
         // find second small with again traverse on array
         for (int i = 0; i < n; i++) {
